@@ -1,13 +1,16 @@
 #include <iostream>
 #include <random>
+
 // Implementar Primero en llegar primero en atenderse
+ 
  class Cliente {
   int tiempo;
   public:
-  setTiempo(); // recorrer array/lista y asignar aleatoriamente la atencion entre 3 y 15 minutos. Uno representa un minuto.
+  setTiempo(); // recorrer array/lista y asignar aleatoriamente la atencion entre 3 y 15 minutos.
   // un bucle
   int getTiempo();
 };
+ 
  class Cola {
   private:
     int n;
@@ -21,6 +24,7 @@
     bool isEmpty(); // verifica si esta vacia la cola.
     //void setTipoCola(int _tipo) { tipoCola=_tipo;}
 };
+ 
  class Cajero {
   private:
     int id;
@@ -32,6 +36,7 @@
     int atender(); // resta un minuto de atencion.
     bool estaLibre(); // Devuelve true si ya no esta ocupado.
 };
+ 
  class Banco {
   private:
     string nombre;
@@ -40,11 +45,11 @@
     Cola *cola;
   public:
     Banco(int _numcajeros);
-    int simularAtencion(); // simula proceso de atencion. En un bucle recorrer los cajeros y restar un minuto de atenncion por cada cajero.
+    int simularAtencion(); // simula proceso de atencion. En un bucle recorrer los cajeros y restar un minuto de atencion por cada cajero.
     void setCliente( Cliente _cliente);
 };
- int main()
-{
+ 
+ int main() {
   /*
   1. Establecer numero de clientes
   2. Establecer numero de cajeros.
