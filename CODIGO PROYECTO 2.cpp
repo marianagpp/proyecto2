@@ -16,12 +16,12 @@ class Cajero{
   ~Cajero(){};
   void setTiempo(int _tiempo){tiempo=_tiempo;};
   void setOcupado(bool _ocupado){ocupado=_ocupado;};
-  void sett_atencion(int);
+  void setT_atencion(int);
 
 string getNombre(){return nombre;};
 bool getOcupado(){return ocupado;};
 int getTiempo(){return tiempo;};
-int gett_atencion(){return t_atencion;};};
+int getT_atencion(){return t_atencion;};};
 
 Cajero::Cajero(string _nombre, bool _ocupado, int _tiempo, int _t_atencion){
 nombre =_nombre;
@@ -29,7 +29,7 @@ ocupado = _ocupado;
 tiempo = _tiempo;
 t_atencion =_t_atencion;}
 
-void Cajero::sett_atencion(int _atencion){
+void Cajero::setT_atencion(int _atencion){
   t_atencion += _atencion;}
 
 class Cliente {
@@ -73,9 +73,9 @@ int main() {
     if(a==false){
       if(posicion<x){
         C1.setOcupado(true);
-        cout<<"Cajero1(C"<<posicion+1<<") "<<endl;
+        cout<<"Cajero1 (C"<<posicion+1<<") "<<endl;
         C1.setTiempo(clientes[posicion].getTiempo());
-        C1.sett_atencion(clientes[posicion].getTiempo());
+        C1.setT_atencion(clientes[posicion].getTiempo());
         posicion+=1; 
       } }
 
@@ -83,9 +83,9 @@ int main() {
       if(b==false){
         if(posicion<x){
           C2.setOcupado(true);
-          cout<<"Cajero2(C"<<posicion+1<<") "<<endl;
+          cout<<"Cajero2 (C"<<posicion+1<<") "<<endl;
           C2.setTiempo(clientes[posicion].getTiempo());
-          C2.sett_atencion(clientes[posicion].getTiempo());
+          C2.setT_atencion(clientes[posicion].getTiempo());
           posicion+=1;
         } }
 
@@ -93,9 +93,9 @@ int main() {
         if(c==false){
           if(posicion<x){
             C3.setOcupado(true);
-            cout<<"Cajero3(C"<<posicion+1<<") "<<endl;
+            cout<<"Cajero3 (C"<<posicion+1<<") "<<endl;
             C3.setTiempo(clientes[posicion].getTiempo());
-            C3.sett_atencion(clientes[posicion].getTiempo());
+            C3.setT_atencion(clientes[posicion].getTiempo());
             posicion+=1;
           } }
 
@@ -103,9 +103,9 @@ int main() {
           if(d==false){
             if(posicion<x){
               C4.setOcupado(true);
-              cout<<"Cajero4(C"<<posicion+1<<") "<<endl;
+              cout<<"Cajero4 (C"<<posicion+1<<") "<<endl;
               C4.setTiempo(clientes[posicion].getTiempo());
-              C4.sett_atencion(clientes[posicion].getTiempo());
+              C4.setT_atencion(clientes[posicion].getTiempo());
               posicion+=1;
             } }
 
@@ -113,9 +113,9 @@ int main() {
             if(e==false){
               if(posicion<x){
                 C5.setOcupado(true);
-                cout<<"Cajero5(C"<<posicion+1<<") "<<endl;
+                cout<<"Cajero5 (C"<<posicion+1<<") "<<endl;
                 C5.setTiempo(clientes[posicion].getTiempo());
-                C5.sett_atencion(clientes[posicion].getTiempo());
+                C5.setT_atencion(clientes[posicion].getTiempo());
                 posicion+=1;
               } } } } } }
 
@@ -142,11 +142,11 @@ int main() {
   Tiempo_Banco +=1;}
   cout<<endl;
 
-  cout<<"El cajero 1 atendio en "<<C1.gett_atencion()<<" minutos."<<endl;
-  cout<<"El cajero 2 atendio en "<<C2.gett_atencion()<<" minutos."<<endl;
-  cout<<"El cajero 3 atendio en "<<C3.gett_atencion()<<" minutos."<<endl;
-  cout<<"El cajero 4 atendio en "<<C4.gett_atencion()<<" minutos."<<endl;
-  cout<<"El cajero 5 atendio en "<<C5.gett_atencion()<<" minutos."<<endl;
+  cout<<"El cajero 1 atendio en "<<C1.getT_atencion()<<" minutos."<<endl;
+  cout<<"El cajero 2 atendio en "<<C2.getT_atencion()<<" minutos."<<endl;
+  cout<<"El cajero 3 atendio en "<<C3.getT_atencion()<<" minutos."<<endl;
+  cout<<"El cajero 4 atendio en "<<C4.getT_atencion()<<" minutos."<<endl;
+  cout<<"El cajero 5 atendio en "<<C5.getT_atencion()<<" minutos."<<endl;
   cout<<endl;
   cout<<"El banco atendio a todos los clientes en "<<Tiempo_Banco<<" minutos."<<endl;
   return 0;}
